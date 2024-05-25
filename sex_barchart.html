@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gender Distribution in Education Programs</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="sex_barchart.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <header>
+        <h1>Prikaz podataka o studentima u Hrvatskoj</h1>
+        <nav>
+            <ul>
+                <li><a href="croatia-map.html">Karta Hrvatske</a></li>
+                <li><a href="barchart.html">Vrste studija</a></li>
+                <li><a href="./sex_barchart.html">Vizualizacija po spolu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="chart"></div>
+    <script>
+        var data = [
+            { "programType": "Sveučilište", "womanStudents": 0.5755211549570215 },
+            { "programType": "Javna sveučilišta", "womanStudents": 0.5770308284688478 },
+            { "programType": "Privatna sveučilišta", "womanStudents": 0.5376115756600496 },
+            { "programType": "Veleučilište", "womanStudents": 0.46603474168646275 },
+            { "programType": "Javna veleučilišta", "womanStudents": 0.49359604155583436 },
+            { "programType": "Privatna veleučilišta", "womanStudents": 0.4461293584474722 },
+            { "programType": "UKUPNO", "womanStudents": 0.5627614601773699 }
+        ];
+
+        // Add male students' data to each entry
+        data.forEach(function(d) {
+            d.manStudents = 1 - d.womanStudents;
+        });
+
+        var margin = {top: 20, right: 30, bottom: 40, left: 40},
+            width = 960 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+
+        var svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var x0 = d3.scaleBand()
+            .rangeRound([0, width])
+            .paddingInner(0.1);
+
+        var x1 = d3.scaleBand()
+            .padding(0.05);
+
+        var y = d3.scaleLinear()
+            .rangeRound([height, 0]);
+
+        var z = d3.scaleOrdinal()
+            .range(["pink", "blue"]);
+
+        var keys = ["womanStudents", "manStudents"];
+
+        x0.domain(data.map(function(d) { return d.programType; }));
+        x1.domain(keys).rangeRound([0, x0.bandwidth()]);
+        y.domain([0, 1]).nice();
+
+        svg.append("g")
+            .selectAll("g")
+            .data(data)
+            .enter().append("g")
+            .attr("transform", function(d) { return "translate(" + x0(d.programType) + ",0)"; })
+            .selectAll("rect")
+            .data(function(d) { return keys.map(function(key) { return {key: key, value: d[key]}; }); })
+            .enter().append("rect")
+            .attr("x", function(d) { return x1(d.key); })
+            .attr("y", function(d) { return y(d.value); })
+            .attr("width", x1.bandwidth())
+            .attr("height", function(d) { return height - y(d.value); })
+            .attr("fill", function(d) { return z(d.key); });
+
+        svg.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x0));
+
+        svg.append("g")
+            .attr("class", "axis")
+            .call(d3.axisLeft(y).ticks(10, "%"));
+
+        var legend = svg.append("g")
+            .attr("font-family", "sans-serif")
+            .attr("font-size", 10)
+            .attr("text-anchor", "end")
+            .selectAll("g")
+            .data(keys.slice().reverse())
+            .enter().append("g")
+            .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+        legend.append("rect")
+            .attr("x", width - 19)
+            .attr("width", 19)
+            .attr("height", 19)
+            .attr("fill", z);
+
+        legend.append("text")
+            .attr("x", width - 24)
+            .attr("y", 9.5)
+            .attr("dy", "0.32em")
+            .text(function(d) { return d === "womanStudents" ? "Žene" : "Muškarci"; });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+[
+    {
+     "programType": "Sveučilište",
+     "womanStudents": 0.5755211549570215
+    },
+    {
+     "programType": "Javna sveučilišta",
+     "womanStudents": 0.5770308284688478
+    },
+    {
+     "programType": "Privatna sveučilišta",
+     "womanStudents": 0.5376115756600496
+    },
+    {
+     "programType": "Veleučilište",
+     "womanStudents": 0.46603474168646275
+    },
+    {
+     "programType": "Javna veleučilišta",
+     "womanStudents": 0.49359604155583436
+    },
+    {
+     "programType": "Privatna veleučilišta",
+     "womanStudents": 0.4461293584474722
+    },
+    {
+     "programType": "UKUPNO",
+     "womanStudents": 0.5627614601773699
+    }
+   ]

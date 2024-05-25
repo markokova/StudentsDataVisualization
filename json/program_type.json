@@ -1,0 +1,46 @@
+[
+    {
+     "programType": "Stručni studij",
+     "students": 44580
+    },
+    {
+     "programType": "Stručni kratki studij",
+     "students": 7
+    },
+    {
+     "programType": "Stručni prijediplomski studij",
+     "students": 36928
+    },
+    {
+     "programType": "Stručni diplomski studij",
+     "students": 7645
+    },
+    {
+     "programType": "Sveučilišni studij",
+     "students": 114174
+    },
+    {
+     "programType": "Dodiplomski sveučilišni studij",
+     "students": 54
+    },
+    {
+     "programType": "Sveučilišni prijediplomski studij",
+     "students": 52484
+    },
+    {
+     "programType": "Sveučilišni diplomski studij",
+     "students": 28495
+    },
+    {
+     "programType": "Sveučilišni integrirani studij",
+     "students": 26214
+    },
+    {
+     "programType": "Sveučilišni specijalistički studij",
+     "students": 2199
+    },
+    {
+     "programType": "Doktorski studij",
+     "students": 4728
+    }
+   ]

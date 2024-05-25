@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Statistika studenata</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="barchart.css">
+</head>
+<body>
+    <header>
+        <img id="croatia-seaside" src="./images/croatia.jpg" alt="">
+        <h1 id="title">Prikaz podataka o studentima u Hrvatskoj</h1>
+        <nav>
+            <ul>
+                <li><a href="croatia-map.html">Karta Hrvatske</a></li>
+                <li><a href="./barchart.html">Vrste studija</a></li>
+                <li><a href="./sex_barchart.html">Vizualizacija po spolu</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <label for="parameter-select">Odaberite parametar:</label>
+        <select id="parameter-select">
+            <option value="studenata">Broj studenata</option>
+            <option value="stanovnika">Broj stanovnika</option>
+            <option value="postotak-studenata">Postotak studenata</option>
+            <option value="broj-fakulteta">Broj fakulteta</option>
+        </select>
+        <svg id="map" width="600" height="700"></svg>
+        <div class="district-data">
+            <h2>Detalji o županiji</h2>
+            <p id="zupanija">Županija:</p>
+            <p id="stanovnika">Broj stanovnika:</p>
+            <p id="studenata">Broj studenata:</p>
+            <p id="postotak-studenata">Postotak studenata:</p>
+            <p id="grad_opcina">Broj gradova/općina:</p>
+        </div>
+    </div>
+    <div id="legend"></div>
+    
+    <script>
+        function createLegend(color) {
+            const legendWidth = 600;
+            const legendHeight = 30;
+
+            const legendSvg = d3.select("#legend")
+                .append("svg")
+                .attr("width", legendWidth - 20)
+                .attr("height", 60)
+                .style("background", "white");
+
+            const gradient = legendSvg.append("defs")
+                .append("linearGradient")
+                .attr("id", "gradient")
+                .attr("x1", "5%")
+                .attr("x2", "150%")
+                .attr("y1", "0%")
+                .attr("y2", "0%");
+
+            gradient.append("stop")
+                .attr("offset", "0%")
+                .attr("stop-color", "#008000")
+                .attr("stop-opacity", 1);
+
+            gradient.append("stop")
+                .attr("offset", "60%")
+                .attr("stop-color", "#FFFF00")
+                .attr("stop-opacity", 1);
+
+            gradient.append("stop")
+                .attr("offset", "100%")
+                .attr("stop-color", "#FF0000")
+                .attr("stop-opacity", 1);
+
+            legendSvg.append("rect")
+                .attr("width", legendWidth)
+                .attr("height", legendHeight)
+                .style("fill", "url(#gradient)");
+
+            const xScale = d3.scale.linear()
+                .domain([2000, 50000])
+                .range([0, legendWidth]);
+
+            const xAxis = d3.svg.axis()
+                .scale(xScale)
+                .orient("bottom")
+                .ticks(5);
+
+            legendSvg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + legendHeight + ")")
+                .call(xAxis);
+        }
+
+        var width = 600;
+        var height = 700;
+        var projection = d3.geo.mercator()
+            .center([0, 10])
+            .scale(6000)
+            .translate([17600, 4500])
+            .rotate([-180, 0]);
+        var path = d3.geo.path()
+            .projection(projection);
+        var svg = d3.select("#map")
+            .attr("width", width)
+            .attr("height", height)
+            .style("background", "white");
+        d3.json("cro_regv3_ext.json", function(error, cro) {
+            var data = topojson.feature(cro, cro.objects.layer1);
+
+            var color = d3.scale.log()
+                .domain([500, 90000]) // Adjusted domain to include the full range of data values
+                .range(["#008000", "#83F28F", "#FFFF00"]); //83F28F
+
+            createLegend(color);
+
+            var states = svg.selectAll("path.county")
+                .data(data.features)
+                .enter()
+                .append("path")
+                .attr("class", "county")
+                .attr("id", function(d) { return d.id; })
+                .attr("d", path) 
+                .style("fill", function(d) { return color(d.properties.studenata); })
+                .style("stroke", "gray")
+                .style("stroke-width", 1)
+                .style("stroke-opacity", 1)
+                .on("mouseover", function(d){ 
+                    d3.select("#zupanija").text("Županija: " + d.properties.name);
+                    d3.select("#studenata").text("Studenata: " + d.properties.studenata);
+                    d3.select("#stanovnika").text("Stanovnika: " + d.properties.stanovnika);
+                    d3.select('#postotak-studenata').text(`Postotak studenata: ${((d.properties.studenata / d.properties.stanovnika) * 100).toFixed(2)}%`);
+                    d3.select("#grad_opcina").text("Gradova/općina: " + d.properties.gradovi_opcine);
+                })
+                .on("click", showDistrictDetails);
+            function showDistrictDetails(d){
+                var centroid = path.centroid(d);
+                var x = centroid[0];
+                var y = centroid[1];
+                
+                var districtName = d.properties.name;
+                districtName = districtName.toUpperCase();
+
+                console.log(districtName);
+
+                 // Load the universities data from students2.json
+                 d3.json("json/students2.json", function (error, dataset) {
+                    if (error) throw error;
+
+                    // Filter universities based on district
+                    var filteredUniversities = dataset.filter(function (uni) {
+                        return uni.district === districtName;
+                    });
+
+                    // Log or display the filtered universities
+                    console.log("Universities in " + districtName + ":", filteredUniversities);
+
+                     // Get the modal element
+                    var modal = document.getElementById("districtModal");
+                    var modalDetails = document.getElementById("modalDetails");
+
+                    // Update modal content
+                    modalDetails.innerHTML = "<h3>Fakulteti u " + districtName + ":</h3>";
+                    filteredUniversities.forEach(function (uni) {
+                        modalDetails.innerHTML += "<p>" + uni.university + ": " + uni.students + " studenata, " + uni.category + "</p>";
+                    });
+
+                    // Display the modal
+                    modal.style.display = "block";
+
+                    // Close the modal when the user clicks on <span> (x)
+                    var span = document.getElementsByClassName("close")[0];
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    };
+
+                    // Close the modal when the user clicks anywhere outside of the modal
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    };      
+                    createBarChart(filteredUniversities);              
+                });
+
+            }
+        });
+
+        function createBarChart(data) {
+            // Remove any existing chart
+            d3.select("#chart").selectAll("*").remove();
+
+            // Group data by category and sum students
+            var categoryData = d3.nest()
+                .key(function(d) { return d.category; })
+                .rollup(function(v) { return d3.sum(v, function(d) { return d.students; }); })
+                .entries(data);
+
+            var margin = {top: 20, right: 20, bottom: 150, left: 80},
+                width = 600 - margin.left - margin.right,
+                height = 500 - margin.top - margin.bottom;
+
+            var x = d3.scale.ordinal()
+                .rangeRoundBands([0, width], .1);
+
+            var y = d3.scale.linear()
+                .range([height, 0]);
+
+            var xAxis = d3.svg.axis()
+                .scale(x)
+                .orient("bottom");
+
+            var yAxis = d3.svg.axis()
+                .scale(y)
+                .orient("left")
+                .ticks(10);
+
+            var svg = d3.select("#chart").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            x.domain(categoryData.map(function(d) { return d.key; }));
+            y.domain([0, d3.max(categoryData, function(d) { return d.values; })]);
+
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis)
+                .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("dx", ".30em")
+                .attr("dy", ".50em")
+                .attr("transform", "rotate(-20)")
+
+            svg.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+                .append("text")
+                .attr("y", 6)
+                .attr("dy", "-.90em")
+                .style("text-anchor", "end")
+                .text("[Studenti]");
+
+            svg.selectAll(".bar")
+                .data(categoryData)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", function(d) { return x(d.key); })
+                .attr("width", x.rangeBand())
+                .attr("y", function(d) { return y(d.values); })
+                .attr("height", function(d) { return height - y(d.values); });
+        }
+    </script>
+    <div id="districtModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalDetails"></div>
+            <div id="chart"></div>
+        </div>
+    </div>
+</body>
+</html>
