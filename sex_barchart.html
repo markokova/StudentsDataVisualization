@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>Gender Distribution in Education Programs</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <link rel="stylesheet" href="sex_barchart.css">
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="./styles/sex_barchart.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
     <header>
-        <h1>Prikaz podataka o studentima u Hrvatskoj</h1>
+        <img id="croatia-seaside" src="./images/croatia.jpg" alt="">
+        <h1 id="title">Prikaz podataka o studentima u Hrvatskoj</h1>
         <nav>
             <ul>
                 <li><a href="croatia-map.html">Karta Hrvatske</a></li>
@@ -19,6 +21,13 @@
         </nav>
     </header>
     <div id="chart"></div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Prikaz podataka o studentima u Hrvatskoj.</p>
+            <p>Izradio: <a href="https://github.com/markokova">markokova</a></p>
+            <p><a href="https://data.gov.hr/ckan/dataset/broj-studenata/resource/8473566d-b8bd-4df3-baee-c8a48ad6eb58?inner_span=True">Podatci</a></p>
+        </div>
+    </footer>
     <script>
         var data = [
             { "programType": "Sveučilište", "womanStudents": 0.5755211549570215 },

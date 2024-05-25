@@ -5,9 +5,10 @@
     <title>Statistika studenata</title>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="barchart.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/barchart.css">
+    <link rel="stylesheet" href="./styles/footer.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
         <option value="broj-fakulteta">Broj fakulteta</option>
     </select>
     <div class="container">
-
+        <div id="legend"></div>
         <svg id="map" width="600" height="700"></svg>
         <div class="district-data">
             <h2>Detalji o županiji</h2>
@@ -39,9 +40,24 @@
             <p id="studenata">Broj studenata:</p>
             <p id="postotak-studenata">Postotak studenata:</p>
             <p id="grad_opcina">Broj gradova/općina:</p>
+            <p id="broj-fakulteta">Broj fakulteta:</p>
         </div>
     </div>
-    <div id="legend"></div>
+    <div id="districtModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalDetails"></div>
+            <div id="chart"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Prikaz podataka o studentima u Hrvatskoj.</p>
+            <p>Izradio: <a href="https://github.com/markokova">markokova</a></p>
+            <p><a href="https://data.gov.hr/ckan/dataset/broj-studenata/resource/8473566d-b8bd-4df3-baee-c8a48ad6eb58?inner_span=True">Podatci</a></p>
+        </div>
+    </footer>
+
 
     <script>
         const parameterSelect = document.getElementById("parameter-select");
@@ -54,30 +70,28 @@
                     return d3.scale.log().domain([5000, 900000]).range(["#008000", "#83F28F", "#FFFF00"]);
                 case "postotak-studenata":
                     return d3.scale.linear().domain([0, 10]).range(["#008000", "#83F28F", "#FFFF00"]);
-                case "broj-univerziteta":
-                    return d3.scale.linear().domain([0, 20]).range(["#008000", "#83F28F", "#FFFF00"]);
+                case "broj-fakulteta":
+                    return d3.scale.linear().domain([0, 50]).range(["#008000", "#83F28F", "#FFFF00"]);
             }
         }
 
-
-
         function initializeLegend() {
-            const legendWidth = 600;
-            const legendHeight = 30;
+            const legendWidth = 150;
+            const legendHeight = 300;
 
             const legendSvg = d3.select("#legend")
                 .append("svg")
                 .attr("id", "legendSvg")
-                .attr("width", legendWidth - 20)
-                .attr("height", 60)
+                .attr("width", legendWidth)
+                .attr("height", legendHeight + 30)
                 .style("background", "white");
 
             const gradient = legendSvg.append("defs")
                 .append("linearGradient")
                 .attr("id", "gradient")
-                .attr("x1", "5%")
-                .attr("x2", "150%")
-                .attr("y1", "0%")
+                .attr("x1", "0%")
+                .attr("x2", "0%")
+                .attr("y1", "100%")
                 .attr("y2", "0%");
 
             gradient.append("stop")
@@ -96,23 +110,24 @@
                 .attr("stop-opacity", 1);
 
             legendSvg.append("rect")
-                .attr("width", legendWidth)
+                .attr("width", legendWidth - 80)
                 .attr("height", legendHeight)
+                .attr("x", 40)
                 .style("fill", "url(#gradient)");
 
-            const xScale = d3.scale.linear()
+            const yScale = d3.scale.linear()
                 .domain([2000, 50000])
-                .range([0, legendWidth]);
+                .range([legendHeight, 0]);
 
-            const xAxis = d3.svg.axis()
-                .scale(xScale)
-                .orient("bottom")
+            const yAxis = d3.svg.axis()
+                .scale(yScale)
+                .orient("right")
                 .ticks(5);
 
             legendSvg.append("g")
-                .attr("class", "x axis")
-                .attr("transform", "translate(0," + legendHeight + ")")
-                .call(xAxis);
+                .attr("class", "y axis")
+                .attr("transform", "translate(40,0)")
+                .call(yAxis);
         }
 
         function updateLegend(color) {
@@ -131,18 +146,18 @@
                 .attr("stop-color", color.range()[2]);
 
             // Update the axis scale based on the color scale domain
-            const xScale = d3.scale.linear()
+            const yScale = d3.scale.linear()
                 .domain(color.domain())
-                .range([0, 600]);
+                .range([300, 0]);
 
-            const xAxis = d3.svg.axis()
-                .scale(xScale)
-                .orient("bottom")
+            const yAxis = d3.svg.axis()
+                .scale(yScale)
+                .orient("right")
                 .ticks(5);
 
-            legendSvg.select(".x.axis")
+            legendSvg.select(".y.axis")
                 .transition()
-                .call(xAxis);
+                .call(yAxis);
         }
 
         function createBarChart(data) {
@@ -191,7 +206,7 @@
                 .style("text-anchor", "end")
                 .attr("dx", ".30em")
                 .attr("dy", ".50em")
-                .attr("transform", "rotate(-20)")
+                .attr("transform", "rotate(-20)");
 
             svg.append("g")
                 .attr("class", "y axis")
@@ -212,13 +227,12 @@
                 .attr("height", function (d) { return height - y(d.values); });
         }
 
-
         function updateMap() {
             const parameter = parameterSelect.value;
             const color = getColorScale(parameter);
             updateLegend(color);
 
-            d3.json("cro_regv3_ext.json", function (error, cro) {
+            d3.json("data/cro_regv3_ext.json", function (error, cro) {
                 if (error) throw error;
 
                 var data = topojson.feature(cro, cro.objects.layer1);
@@ -240,6 +254,7 @@
                         d3.select("#stanovnika").text("Stanovnika: " + d.properties.stanovnika);
                         d3.select('#postotak-studenata').text(`Postotak studenata: ${((d.properties.studenata / d.properties.stanovnika) * 100).toFixed(2)}%`);
                         d3.select("#grad_opcina").text("Gradova/općina: " + d.properties.gradovi_opcine);
+                        d3.select("#broj-fakulteta").text("Broj fakulteta: " + d.properties.broj_fakulteta);
                     })
                     .on("click", showDistrictDetails);
 
@@ -251,10 +266,9 @@
                             case "stanovnika":
                                 return color(d.properties.stanovnika);
                             case "postotak-studenata":
-                                console.log((d.properties.studenata / d.properties.stanovnika) * 100);
                                 return color((d.properties.studenata / d.properties.stanovnika) * 100);
-                            case "broj-univerziteta":
-                                return color(d.properties.broj_univerziteta);
+                            case "broj-fakulteta":
+                                return color(d.properties.broj_fakulteta);
                         }
                     });
 
@@ -268,7 +282,7 @@
                     var districtName = d.properties.name;
                     districtName = districtName.toUpperCase();
 
-                    d3.json("json/students2.json", function (error, dataset) {
+                    d3.json("data/students2.json", function (error, dataset) {
                         if (error) throw error;
 
                         var filteredUniversities = dataset.filter(function (uni) {
@@ -304,16 +318,10 @@
 
         document.addEventListener("DOMContentLoaded", function () {
             parameterSelect.addEventListener("change", updateMap);
-            initializeLegend();
+            initializeLegend(); // Initialize the legend on page load
             updateMap(); // Initial map rendering
         });
     </script>
-    <div id="districtModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modalDetails"></div>
-            <div id="chart"></div>
-        </div>
-    </div>
+
 </body>
 </html>
