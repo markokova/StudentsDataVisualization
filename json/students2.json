@@ -641,13 +641,6 @@
         "district": "PRIMORSKO-GORANSKA"
     },
     {
-        "university": "SVEUČILIŠTE U SLAVONSKOM BRODU",
-        "students": 2072,
-        "category": "društveno usmjerenje",
-        "city": "SLAVONSKI BROD",
-        "district": "BRODSKO-POSAVSKA"
-    },
-    {
         "university": "SVEUČILIŠTE U SPLITU***",
         "students": 249,
         "category": "društveno usmjerenje",
@@ -828,13 +821,6 @@
         "category": "društveno usmjerenje",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
-    },
-    {
-        "university": "SVEUČILIŠTE U ZADRU",
-        "students": 4807,
-        "category": "društveno usmjerenje",
-        "city": "ZADAR",
-        "district": "ZADARSKA"
     },
     {
         "university": "SVEUČILIŠTE U ZAGREBU***",
@@ -1034,7 +1020,8 @@
         "university": "VELEUČILIŠTE U VIROVITICI",
         "students": 328,
         "category": "tehničko usmjerenje",
-        "city": "VIROVITICA"
+        "city": "VIROVITICA",
+        "district": "VIROVITIČKO-PODRAVSKA"
     },
     {
         "university": "VETERINARSKI FAKULTET, ZAGREB",

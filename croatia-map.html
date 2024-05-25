@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Statistika studenata</title>
     <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="barchart.css">
 </head>
+
 <body>
     <header>
         <img id="croatia-seaside" src="./images/croatia.jpg" alt="">
@@ -16,19 +18,19 @@
             <ul>
                 <li><a href="croatia-map.html">Karta Hrvatske</a></li>
                 <li><a href="./barchart.html">Vrste studija</a></li>
-                <li><a href="./sex_barchart.html">Vizualizacija po spolu</a></li>
+                <li><a href="./sex_barchart.html">Spol</a></li>
             </ul>
         </nav>
     </header>
-    
+    <label for="parameter-select">Odaberite parametar:</label>
+    <select id="parameter-select">
+        <option value="studenata">Broj studenata</option>
+        <option value="stanovnika">Broj stanovnika</option>
+        <option value="postotak-studenata">Postotak studenata</option>
+        <option value="broj-fakulteta">Broj fakulteta</option>
+    </select>
     <div class="container">
-        <label for="parameter-select">Odaberite parametar:</label>
-        <select id="parameter-select">
-            <option value="studenata">Broj studenata</option>
-            <option value="stanovnika">Broj stanovnika</option>
-            <option value="postotak-studenata">Postotak studenata</option>
-            <option value="broj-fakulteta">Broj fakulteta</option>
-        </select>
+
         <svg id="map" width="600" height="700"></svg>
         <div class="district-data">
             <h2>Detalji o županiji</h2>
@@ -40,14 +42,32 @@
         </div>
     </div>
     <div id="legend"></div>
-    
+
     <script>
-        function createLegend(color) {
+        const parameterSelect = document.getElementById("parameter-select");
+
+        function getColorScale(parameter) {
+            switch (parameter) {
+                case "studenata":
+                    return d3.scale.log().domain([500, 90000]).range(["#008000", "#83F28F", "#FFFF00"]);
+                case "stanovnika":
+                    return d3.scale.log().domain([5000, 900000]).range(["#008000", "#83F28F", "#FFFF00"]);
+                case "postotak-studenata":
+                    return d3.scale.linear().domain([0, 10]).range(["#008000", "#83F28F", "#FFFF00"]);
+                case "broj-univerziteta":
+                    return d3.scale.linear().domain([0, 20]).range(["#008000", "#83F28F", "#FFFF00"]);
+            }
+        }
+
+
+
+        function initializeLegend() {
             const legendWidth = 600;
             const legendHeight = 30;
 
             const legendSvg = d3.select("#legend")
                 .append("svg")
+                .attr("id", "legendSvg")
                 .attr("width", legendWidth - 20)
                 .attr("height", 60)
                 .style("background", "white");
@@ -95,99 +115,35 @@
                 .call(xAxis);
         }
 
-        var width = 600;
-        var height = 700;
-        var projection = d3.geo.mercator()
-            .center([0, 10])
-            .scale(6000)
-            .translate([17600, 4500])
-            .rotate([-180, 0]);
-        var path = d3.geo.path()
-            .projection(projection);
-        var svg = d3.select("#map")
-            .attr("width", width)
-            .attr("height", height)
-            .style("background", "white");
-        d3.json("cro_regv3_ext.json", function(error, cro) {
-            var data = topojson.feature(cro, cro.objects.layer1);
+        function updateLegend(color) {
+            const legendSvg = d3.select("#legendSvg");
 
-            var color = d3.scale.log()
-                .domain([500, 90000]) // Adjusted domain to include the full range of data values
-                .range(["#008000", "#83F28F", "#FFFF00"]); //83F28F
+            // Update gradient stops based on the color scale
+            const gradient = legendSvg.select("#gradient");
 
-            createLegend(color);
+            gradient.select("stop[offset='0%']")
+                .attr("stop-color", color.range()[0]);
 
-            var states = svg.selectAll("path.county")
-                .data(data.features)
-                .enter()
-                .append("path")
-                .attr("class", "county")
-                .attr("id", function(d) { return d.id; })
-                .attr("d", path) 
-                .style("fill", function(d) { return color(d.properties.studenata); })
-                .style("stroke", "gray")
-                .style("stroke-width", 1)
-                .style("stroke-opacity", 1)
-                .on("mouseover", function(d){ 
-                    d3.select("#zupanija").text("Županija: " + d.properties.name);
-                    d3.select("#studenata").text("Studenata: " + d.properties.studenata);
-                    d3.select("#stanovnika").text("Stanovnika: " + d.properties.stanovnika);
-                    d3.select('#postotak-studenata').text(`Postotak studenata: ${((d.properties.studenata / d.properties.stanovnika) * 100).toFixed(2)}%`);
-                    d3.select("#grad_opcina").text("Gradova/općina: " + d.properties.gradovi_opcine);
-                })
-                .on("click", showDistrictDetails);
-            function showDistrictDetails(d){
-                var centroid = path.centroid(d);
-                var x = centroid[0];
-                var y = centroid[1];
-                
-                var districtName = d.properties.name;
-                districtName = districtName.toUpperCase();
+            gradient.select("stop[offset='60%']")
+                .attr("stop-color", color.range()[1]);
 
-                console.log(districtName);
+            gradient.select("stop[offset='100%']")
+                .attr("stop-color", color.range()[2]);
 
-                 // Load the universities data from students2.json
-                 d3.json("json/students2.json", function (error, dataset) {
-                    if (error) throw error;
+            // Update the axis scale based on the color scale domain
+            const xScale = d3.scale.linear()
+                .domain(color.domain())
+                .range([0, 600]);
 
-                    // Filter universities based on district
-                    var filteredUniversities = dataset.filter(function (uni) {
-                        return uni.district === districtName;
-                    });
+            const xAxis = d3.svg.axis()
+                .scale(xScale)
+                .orient("bottom")
+                .ticks(5);
 
-                    // Log or display the filtered universities
-                    console.log("Universities in " + districtName + ":", filteredUniversities);
-
-                     // Get the modal element
-                    var modal = document.getElementById("districtModal");
-                    var modalDetails = document.getElementById("modalDetails");
-
-                    // Update modal content
-                    modalDetails.innerHTML = "<h3>Fakulteti u " + districtName + ":</h3>";
-                    filteredUniversities.forEach(function (uni) {
-                        modalDetails.innerHTML += "<p>" + uni.university + ": " + uni.students + " studenata, " + uni.category + "</p>";
-                    });
-
-                    // Display the modal
-                    modal.style.display = "block";
-
-                    // Close the modal when the user clicks on <span> (x)
-                    var span = document.getElementsByClassName("close")[0];
-                    span.onclick = function() {
-                        modal.style.display = "none";
-                    };
-
-                    // Close the modal when the user clicks anywhere outside of the modal
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    };      
-                    createBarChart(filteredUniversities);              
-                });
-
-            }
-        });
+            legendSvg.select(".x.axis")
+                .transition()
+                .call(xAxis);
+        }
 
         function createBarChart(data) {
             // Remove any existing chart
@@ -195,11 +151,11 @@
 
             // Group data by category and sum students
             var categoryData = d3.nest()
-                .key(function(d) { return d.category; })
-                .rollup(function(v) { return d3.sum(v, function(d) { return d.students; }); })
+                .key(function (d) { return d.category; })
+                .rollup(function (v) { return d3.sum(v, function (d) { return d.students; }); })
                 .entries(data);
 
-            var margin = {top: 20, right: 20, bottom: 150, left: 80},
+            var margin = { top: 20, right: 20, bottom: 150, left: 80 },
                 width = 600 - margin.left - margin.right,
                 height = 500 - margin.top - margin.bottom;
 
@@ -224,8 +180,8 @@
                 .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-            x.domain(categoryData.map(function(d) { return d.key; }));
-            y.domain([0, d3.max(categoryData, function(d) { return d.values; })]);
+            x.domain(categoryData.map(function (d) { return d.key; }));
+            y.domain([0, d3.max(categoryData, function (d) { return d.values; })]);
 
             svg.append("g")
                 .attr("class", "x axis")
@@ -250,11 +206,107 @@
                 .data(categoryData)
                 .enter().append("rect")
                 .attr("class", "bar")
-                .attr("x", function(d) { return x(d.key); })
+                .attr("x", function (d) { return x(d.key); })
                 .attr("width", x.rangeBand())
-                .attr("y", function(d) { return y(d.values); })
-                .attr("height", function(d) { return height - y(d.values); });
+                .attr("y", function (d) { return y(d.values); })
+                .attr("height", function (d) { return height - y(d.values); });
         }
+
+
+        function updateMap() {
+            const parameter = parameterSelect.value;
+            const color = getColorScale(parameter);
+            updateLegend(color);
+
+            d3.json("cro_regv3_ext.json", function (error, cro) {
+                if (error) throw error;
+
+                var data = topojson.feature(cro, cro.objects.layer1);
+
+                const paths = d3.select("#map").selectAll("path.county")
+                    .data(data.features);
+
+                paths.enter()
+                    .append("path")
+                    .attr("class", "county")
+                    .attr("id", function (d) { return d.id; })
+                    .attr("d", d3.geo.path().projection(d3.geo.mercator().center([0, 10]).scale(6000).translate([17600, 4500]).rotate([-180, 0])))
+                    .style("stroke", "gray")
+                    .style("stroke-width", 1)
+                    .style("stroke-opacity", 1)
+                    .on("mouseover", function (d) {
+                        d3.select("#zupanija").text("Županija: " + d.properties.name);
+                        d3.select("#studenata").text("Studenata: " + d.properties.studenata);
+                        d3.select("#stanovnika").text("Stanovnika: " + d.properties.stanovnika);
+                        d3.select('#postotak-studenata').text(`Postotak studenata: ${((d.properties.studenata / d.properties.stanovnika) * 100).toFixed(2)}%`);
+                        d3.select("#grad_opcina").text("Gradova/općina: " + d.properties.gradovi_opcine);
+                    })
+                    .on("click", showDistrictDetails);
+
+                paths.transition().duration(750)
+                    .style("fill", function (d) {
+                        switch (parameter) {
+                            case "studenata":
+                                return color(d.properties.studenata);
+                            case "stanovnika":
+                                return color(d.properties.stanovnika);
+                            case "postotak-studenata":
+                                console.log((d.properties.studenata / d.properties.stanovnika) * 100);
+                                return color((d.properties.studenata / d.properties.stanovnika) * 100);
+                            case "broj-univerziteta":
+                                return color(d.properties.broj_univerziteta);
+                        }
+                    });
+
+                paths.exit().remove();
+
+                function showDistrictDetails(d) {
+                    var centroid = d3.geo.path().projection(d3.geo.mercator().center([0, 10]).scale(6000).translate([17600, 4500]).rotate([-180, 0])).centroid(d);
+                    var x = centroid[0];
+                    var y = centroid[1];
+
+                    var districtName = d.properties.name;
+                    districtName = districtName.toUpperCase();
+
+                    d3.json("json/students2.json", function (error, dataset) {
+                        if (error) throw error;
+
+                        var filteredUniversities = dataset.filter(function (uni) {
+                            return uni.district === districtName;
+                        });
+
+                        var modal = document.getElementById("districtModal");
+                        var modalDetails = document.getElementById("modalDetails");
+
+                        modalDetails.innerHTML = "<h3>Fakulteti u " + districtName + ":</h3>";
+                        filteredUniversities.forEach(function (uni) {
+                            modalDetails.innerHTML += "<p>" + uni.university + ": " + uni.students + " studenata, " + uni.category + "</p>";
+                        });
+                        modalDetails.innerHTML += "<p>" + "Broj fakulteta: " + filteredUniversities.length + "</p>";
+
+                        modal.style.display = "block";
+
+                        var span = document.getElementsByClassName("close")[0];
+                        span.onclick = function () {
+                            modal.style.display = "none";
+                        };
+
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        };
+                        createBarChart(filteredUniversities);
+                    });
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            parameterSelect.addEventListener("change", updateMap);
+            initializeLegend();
+            updateMap(); // Initial map rendering
+        });
     </script>
     <div id="districtModal" class="modal">
         <div class="modal-content">

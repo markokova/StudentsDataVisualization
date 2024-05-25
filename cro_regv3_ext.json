@@ -133,7 +133,7 @@
                    ]
                 ],
                 "properties":{
-                   "studenata": 273,
+                   "studenata": 841,
                    "stanovnika":109375,
                    "gradovi_opcine":20,
                    "adm1_code":"HRV-1491",
@@ -351,7 +351,7 @@
                    ]
                 ],
                 "properties":{
-                   "studenata": 9614,
+                   "studenata": 4807,
                    "stanovnika":170017,
                    "gradovi_opcine":34,
                    "adm1_code":"HRV-1493",
@@ -1070,7 +1070,7 @@
                    ]
                 ],
                 "properties":{
-                  "studenata": 4144,
+                  "studenata": 2072,
                    "stanovnika":158575,
                    "gradovi_opcine":28,
                    "adm1_code":"HRV-1602",
@@ -1224,7 +1224,7 @@
                    ]
                 ],
                 "properties":{
-                  "studenata": 4144,
+                  "studenata": 2072,
                    "stanovnika":158575,
                    "gradovi_opcine":28,
                    "adm1_code":"HRV-1604",
@@ -1376,7 +1376,8 @@
                    ]
                 ],
                 "properties":{
-                   "stanovnika":0,
+                   "stanovnika":79886,
+                   "studenata": 328,
                    "gradovi_opcine":16,
                    "adm1_code":"HRV-1606",
                    "OBJECTID_1":2232,
