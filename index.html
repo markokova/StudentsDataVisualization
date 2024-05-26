@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Statistika studenata</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/barchart.css">
+    <script src="./scripts/include.js" defer></script>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <label for="parameter-select">Odaberite parametar:</label>
+    <select id="parameter-select">
+        <option value="studenata">Broj studenata</option>
+        <option value="stanovnika">Broj stanovnika</option>
+        <option value="postotak-studenata">Postotak studenata</option>
+        <option value="broj-fakulteta">Broj fakulteta</option>
+    </select>
+    <div class="container">
+        <div class="legend-container">
+            <p><strong>Legenda:</strong></p>
+            <div id="legend"></div>
+        </div>
+        <svg id="map" width="600" height="700"></svg>
+        <div class="district-data">
+            <h2>Detalji o županiji</h2>
+            <p id="zupanija">Županija:</p>
+            <p id="stanovnika">Broj stanovnika:</p>
+            <p id="studenata">Broj studenata:</p>
+            <p id="postotak-studenata">Postotak studenata:</p>
+            <p id="grad_opcina">Broj gradova/općina:</p>
+            <p id="broj-fakulteta">Broj fakulteta:</p>
+        </div>
+    </div>
+    <div id="districtModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalDetails"></div>
+            <div id="chart"></div>
+        </div>
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script src="./scripts/renderMap.js"></script>
+
+</body>
+</html>

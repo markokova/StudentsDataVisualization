@@ -2,1055 +2,1055 @@
     {
         "university": "ADVENTISTIČKO TEOLOŠKO VISOKO UČILIŠTE, MARUŠEVEC*",
         "students": 21,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "MARUŠEVEC",
         "district": "VARAŽDINSKA"
     },
     {
         "university": "AGRONOMSKI FAKULTET, ZAGREB",
         "students": 1665,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "AKADEMIJA DRAMSKE UMJETNOSTI, ZAGREB",
         "students": 380,
-        "category": "umjetničko usmjerenje",
+        "category": "umjetničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "AKADEMIJA LIKOVNIH UMJETNOSTI, ZAGREB",
         "students": 408,
-        "category": "umjetničko usmjerenje",
+        "category": "umjetničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "AKADEMIJA PRIMIJENJENIH UMJETNOSTI, RIJEKA",
         "students": 297,
-        "category": "umjetničko usmjerenje",
+        "category": "umjetničko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "AKADEMIJA ZA UMJETNOST I KULTURU, OSIJEK",
         "students": 777,
-        "category": "umjetničko usmjerenje",
+        "category": "umjetničko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "ARHITEKTONSKI FAKULTET, ZAGREB",
         "students": 1101,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "EDUKACIJSKO-REHABILITACIJSKI FAKULTET, ZAGREB",
         "students": 1063,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "EFFECTUS VELEUČILIŠTE, ZAGREB",
         "students": 386,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "EKONOMSKI FAKULTET, OSIJEK",
         "students": 1824,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "EKONOMSKI FAKULTET, RIJEKA",
         "students": 2169,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "EKONOMSKI FAKULTET, SPLIT",
         "students": 2356,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "EKONOMSKI FAKULTET, ZAGREB",
         "students": 9821,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "F. ELEKTROTEHNIKE, RAČUNARSTVA I INFORMACIJSKIH TEHNOLOG., OSIJEK",
         "students": 1757,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "FAKULTET AGROBIOTEHNIČKIH ZNANOSTI, OSIJEK",
         "students": 1046,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "FAKULTET DENTALNE MEDICINE, RIJEKA",
         "students": 254,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "FAKULTET ELEKTROTEHNIKE I RAČUNARSTVA, ZAGREB",
         "students": 4209,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "FAKULTET ELEKTROTEHNIKE, STROJARSTVA I BRODOGRADNJE, SPLIT",
         "students": 2165,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "FAKULTET FILOZOFIJE I RELIGIJSKIH ZNANOSTI, ZAGREB",
         "students": 94,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "FAKULTET GRAĐEVINARSTVA, ARHITEKTURE I GEODEZIJE, SPLIT",
         "students": 1055,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "FAKULTET INFORMATIKE I DIGITALNIH TEHNOLOGIJA, RIJEKA",
         "students": 444,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "FAKULTET KEMIJSKOG INŽENJERSTVA I TEHNOLOGIJE, ZAGREB",
         "students": 1170,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "FAKULTET ORGANIZACIJE I INFORMATIKE, VARAŽDIN",
         "students": 2488,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "VARAŽDIN",
         "district": "VARAŽDINSKA"
     },
     {
         "university": "FAKULTET POLITIČKIH ZNANOSTI, ZAGREB",
         "students": 1392,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "FAKULTET PROMETNIH ZNANOSTI, ZAGREB",
         "students": 1584,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "FAKULTET STROJARSTVA I BRODOGRADNJE, ZAGREB",
         "students": 2602,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "FAKULTET ŠUMARSTVA I DRVNE TEHNOLOGIJE, ZAGREB",
         "students": 812,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "FAKULTET TURIZMA I RURALNOG RAZVOJA U POŽEGI",
         "students": 620,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "POŽEGA",
         "district": "POŽEŠKO-SLAVONSKA"
     },
     {
         "university": "FAKULTET ZA DENTALNU MEDICINU I ZDRAVSTVO, OSIJEK",
         "students": 1103,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "FAKULTET ZA FIZIKU, RIJEKA",
         "students": 129,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "FAKULTET ZA MATEMATIKU, RIJEKA",
         "students": 154,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "FAKULTET ZA MENADŽMENT U TURIZMU I UGOSTITELJSTVU, OPATIJA",
         "students": 1964,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "OPATIJA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "FAKULTET ZA ODGOJNE I OBRAZOVNE ZNANOSTI, OSIJEK",
         "students": 1036,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "FAKULTET ZDRAVSTVENIH STUDIJA, RIJEKA",
         "students": 854,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "FARMACEUTSKO-BIOKEMIJSKI FAKULTET, ZAGREB",
         "students": 1206,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "FILOZOFSKI FAKULTET, OSIJEK",
         "students": 1282,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "FILOZOFSKI FAKULTET, RIJEKA",
         "students": 1277,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "FILOZOFSKI FAKULTET, SPLIT",
         "students": 1425,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "FILOZOFSKI FAKULTET, ZAGREB",
         "students": 6218,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "FILOZOFSKO-TEOLOŠKI INSTITUT D.I., ZAGREB*",
         "students": 54,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "GEODETSKI FAKULTET, ZAGREB",
         "students": 584,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "GEOTEHNIČKI FAKULTET, VARAŽDIN",
         "students": 161,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "VARAŽDIN",
         "district": "VARAŽDINSKA"
     },
     {
         "university": "GRAĐEVINSKI FAKULTET, RIJEKA",
         "students": 797,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "GRAĐEVINSKI FAKULTET, ZAGREB",
         "students": 1361,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "GRAĐEVINSKI I ARHITEKTONSKI FAKULTET, OSIJEK",
         "students": 1151,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "GRAFIČKI FAKULTET, ZAGREB",
         "students": 858,
-        "category": "umjetničko usmjerenje",
+        "category": "umjetničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "HRVATSKI STUDIJI, ZAGREB",
         "students": 1400,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "HRVATSKO KATOLIČKO SVEUČILIŠTE, ZAGREB",
         "students": 1467,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "ISTARSKO VELEUČILIŠTE",
         "students": 74,
-        "category": "društveno usmjerenje"
+        "category": "društveno"
     },
     {
         "university": "KATOLIČKI BOGOSLOVNI FAKULTET, ĐAKOVO",
         "students": 65,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "ĐAKOVO",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "KATOLIČKI BOGOSLOVNI FAKULTET, SPLIT",
         "students": 145,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "KATOLIČKI BOGOSLOVNI FAKULTET, ZAGREB",
         "students": 360,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "KEMIJSKO-TEHNOLOŠKI FAKULTET, SPLIT",
         "students": 453,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "KINEZIOLOŠKI FAKULTET, OSIJEK",
         "students": 365,
-        "category": "sportsko usmjerenje",
+        "category": "sportsko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "KINEZIOLOŠKI FAKULTET, SPLIT",
         "students": 784,
-        "category": "sportsko usmjerenje",
+        "category": "sportsko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "KINEZIOLOŠKI FAKULTET, ZAGREB",
         "students": 2541,
-        "category": "sportsko usmjerenje",
+        "category": "sportsko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "LIBERTAS MEĐUNARODNO SVEUČILIŠTE, ZAGREB",
         "students": 2249,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "MEDICINSKI FAKULTET, OSIJEK",
         "students": 735,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "MEDICINSKI FAKULTET, RIJEKA",
         "students": 1381,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "MEDICINSKI FAKULTET, SPLIT",
         "students": 1335,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "MEDICINSKI FAKULTET, ZAGREB",
         "students": 2937,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "MEĐIMURSKO VELEUČILIŠTE U ČAKOVCU",
         "students": 542,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ČAKOVEC",
         "district": "MEĐIMURSKA"
     },
     {
         "university": "METALURŠKI FAKULTET, SISAK",
         "students": 142,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SISAK",
         "district": "SISAČKO-MOSLAVAČKA"
     },
     {
         "university": "MUZIČKA AKADEMIJA, ZAGREB",
         "students": 556,
-        "category": "umjetničko usmjerenje",
+        "category": "umjetničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "ODJEL ZA BIOLOGIJU, OSIJEK",
         "students": 255,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "ODJEL ZA BIOTEHNOLOGIJU, RIJEKA",
         "students": 311,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "ODJEL ZA FIZIKU, OSIJEK",
         "students": 82,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "ODJEL ZA KEMIJU, OSIJEK",
         "students": 156,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "ODJEL ZA MATEMATIKU, OSIJEK",
         "students": 482,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "POMORSKI FAKULTET, RIJEKA",
         "students": 1519,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "POMORSKI FAKULTET, SPLIT",
         "students": 1290,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "POSLOVNO VELEUČILIŠTE ZAGREB",
         "students": 231,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "PRAVNI FAKULTET, OSIJEK",
         "students": 1871,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "PRAVNI FAKULTET, RIJEKA",
         "students": 1286,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "PRAVNI FAKULTET, SPLIT",
         "students": 1916,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "PRAVNI FAKULTET, ZAGREB",
         "students": 6059,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "PREHRAMBENO-BIOTEHNOLOŠKI FAKULTET, ZAGREB",
         "students": 1063,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "PREHRAMBENO-TEHNOLOŠKI FAKULTET, OSIJEK",
         "students": 644,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "PRIRODOSLOVNO-MATEMATIČKI FAKULTET, SPLIT",
         "students": 1078,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "PRIRODOSLOVNO-MATEMATIČKI FAKULTET, ZAGREB",
         "students": 4006,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "R.I.T. CROATIA, DUBROVNIK",
         "students": 790,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "DUBROVNIK",
         "district": "DUBROVAČKO-NERETVANSKA"
     },
     {
         "university": "RUDARSKO-GEOLOŠKO-NAFTNI FAKULTET, ZAGREB",
         "students": 588,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "STOMATOLOŠKI FAKULTET, ZAGREB",
         "students": 862,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "SVEUČILIŠNI ODJEL ZA FORENZIČNE ZNANOSTI, SPLIT",
         "students": 338,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "SVEUČILIŠNI ODJEL ZA STUDIJE MORA, SPLIT",
         "students": 165,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "SVEUČILIŠNI ODJEL ZDRAVSTVENIH STUDIJA, SPLIT",
         "students": 735,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "SVEUČILIŠNI STUDIJSKI ODJEL ZA STRUČNE  STUDIJE, SPLIT",
         "students": 2141,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "SVEUČILIŠTE  VERN, ZAGREB",
         "students": 1317,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "SVEUČILIŠTE SJEVER",
         "students": 4421,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "district": "KRAPINSKO-ZAGORSKA"
     },
     {
         "university": "SVEUČILIŠTE U DUBROVNIKU",
         "students": 1313,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "DUBROVNIK",
         "district": "DUBROVAČKO-NERETVANSKA"
     },
     {
         "university": "SVEUČILIŠTE U OSIJEKU***",
         "students": 74,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "SVEUČILIŠTE U RIJECI***",
         "students": 183,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "SVEUČILIŠTE U SPLITU***",
         "students": 249,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "SVEUČILIŠTE U ZADRU",
         "students": 4807,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZADAR",
         "district": "ZADARSKA"
     },
     {
         "university": "SVEUČILIŠTE U ZAGREBU***",
         "students": 489,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "TEHNIČKI FAKULTET, RIJEKA",
         "students": 1626,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "TEHNIČKO VELEUČILIŠTE, ZAGREB",
         "students": 4394,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "PRAVNI FAKULTET, ZAGREB",
         "students": 6059,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "PREHRAMBENO-BIOTEHNOLOŠKI FAKULTET, ZAGREB",
         "students": 1063,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "PREHRAMBENO-TEHNOLOŠKI FAKULTET, OSIJEK",
         "students": 644,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "PRIRODOSLOVNO-MATEMATIČKI FAKULTET, SPLIT",
         "students": 1078,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "PRIRODOSLOVNO-MATEMATIČKI FAKULTET, ZAGREB",
         "students": 4006,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "R.I.T. CROATIA, DUBROVNIK",
         "students": 790,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "DUBROVNIK",
         "district": "DUBROVAČKO-NERETVANSKA"
     },
     {
         "university": "RUDARSKO-GEOLOŠKO-NAFTNI FAKULTET, ZAGREB",
         "students": 588,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "STOMATOLOŠKI FAKULTET, ZAGREB",
         "students": 862,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "SVEUČILIŠNI ODJEL ZA FORENZIČNE ZNANOSTI, SPLIT",
         "students": 338,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "SVEUČILIŠNI ODJEL ZA STUDIJE MORA, SPLIT",
         "students": 165,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "SVEUČILIŠNI ODJEL ZDRAVSTVENIH STUDIJA, SPLIT",
         "students": 735,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "SVEUČILIŠNI STUDIJSKI ODJEL ZA STRUČNE  STUDIJE, SPLIT",
         "students": 2141,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "SVEUČILIŠTE  VERN, ZAGREB",
         "students": 1317,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "SVEUČILIŠTE SJEVER",
         "students": 2221,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "VARAŽDIN",
         "district": "VARAŽDINSKA"
     },
     {
         "university": "SVEUČILIŠTE SJEVER",
         "students": 2200,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "KOPRIVNICA",
         "district": "KOPRIVNIČKO-KRIŽEVAČKA"
     },
     {
         "university": "SVEUČILIŠTE U DUBROVNIKU",
         "students": 1313,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "DUBROVNIK",
         "district": "DUBROVAČKO-NERETVANSKA"
     },
     {
         "university": "SVEUČILIŠTE U OSIJEKU***",
         "students": 74,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "OSIJEK",
         "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "SVEUČILIŠTE U PULI",
         "students": 3180,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "PULA",
         "district": "ISTARSKA"
     },
     {
         "university": "SVEUČILIŠTE U RIJECI***",
         "students": 183,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "SVEUČILIŠTE U SLAVONSKOM BRODU",
         "students": 2072,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "SLAVONSKI BROD",
         "district": "BRODSKO-POSAVSKA"
     },
     {
         "university": "SVEUČILIŠTE U SPLITU***",
         "students": 249,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "SVEUČILIŠTE U ZAGREBU***",
         "students": 489,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "TEHNIČKI FAKULTET, RIJEKA",
         "students": 1626,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "TEHNIČKO VELEUČILIŠTE, ZAGREB",
         "students": 4394,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "TEKSTILNO-TEHNOLOŠKI FAKULTET, ZAGREB",
         "students": 493,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "TEOLOŠKI FAKULTET \"MATIJA VLAČIĆ-ILIRIK\", ZAGREB - EVANGELIČKI**",
         "students": 25,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "UČITELJSKI FAKULTET, RIJEKA",
         "students": 566,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "UČITELJSKI FAKULTET, ZAGREB",
         "students": 2890,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "UMJETNIČKA AKADEMIJA, SPLIT",
         "students": 401,
-        "category": "umjetničko usmjerenje",
+        "category": "umjetničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "VELEUČILIŠTE \"HRVATSKO ZAGORJE\", KRAPINA",
         "students": 314,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "KRAPINA",
         "district": "KRAPINSKO-ZAGORSKA"
     },
     {
         "university": "VELEUČILIŠTE \"LAVOSLAV RUŽIČKA\" U VUKOVARU",
         "students": 921,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "VUKOVAR",
         "district": "VUKOVARSKO-SRIJEMSKA"
     },
     {
         "university": "VELEUČILIŠTE \"MARKO MARULIĆ\" U KNINU",
         "students": 273,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "KNIN",
         "district": "ŠIBENSKO-KNINSKA"
     },
     {
         "university": "VELEUČILIŠTE \"NIKOLA TESLA\" U GOSPIĆU",
         "students": 198,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "GOSPIĆ",
         "district": "LIČKO-SENJSKA"
     },
     {
         "university": "VELEUČILIŠTE ARCA, SPLIT",
         "students": 52,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "VELEUČILIŠTE ASPIRA, SPLIT",
         "students": 727,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "VELEUČILIŠTE BALTAZAR, ZAPREŠIĆ",
         "students": 1432,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAPREŠIĆ",
         "district": "ZAGREBAČKA"
     },
     {
         "university": "VELEUČILIŠTE EDWARD BERNAYS, ZAGREB",
         "students": 335,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "VELEUČILIŠTE IVANIĆ-GRAD",
         "students": 166,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "IVANIĆ-GRAD",
         "district": "ZAGREBAČKA"
     },
     {
         "university": "VELEUČILIŠTE KRIMINALISTIKE I JAVNE SIGURNOSTI, ZAGREB",
         "students": 368,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "VELEUČILIŠTE MENADŽMENTA I SIGURNOSTI SECURUS",
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "UNKNOWN",
         "district": "UNKNOWN"
     },
     {
         "university": "VELEUČILIŠTE PAR, RIJEKA",
         "students": 123,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "VELEUČILIŠTE RRIF, ZAGREB",
         "students": 120,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "VELEUČILIŠTE SUVREMENIH INFORMACIJSKIH TEHNOLOGIJA, ZAGREB",
         "students": 428,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "VELEUČILIŠTE U BJELOVARU",
         "students": 749,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "BJELOVAR",
         "district": "BJELOVARSKO-BILOGORSKA"
     },
     {
         "university": "VELEUČILIŠTE U KARLOVCU",
         "students": 1434,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "KARLOVAC",
         "district": "KARLOVAČKA"
     },
     {
         "university": "VELEUČILIŠTE U KRIŽEVCIMA, KRIŽEVCI",
         "students": 337,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "KRIŽEVCI",
         "district": "KOPRIVNIČKO-KRIŽEVAČKA"
     },
     {
         "university": "VELEUČILIŠTE U RIJECI",
         "students": 1368,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "VELEUČILIŠTE U ŠIBENIKU",
         "students": 568,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ŠIBENIK",
         "district": "ŠIBENSKO-KNINSKA"
     },
     {
         "university": "VELEUČILIŠTE U VELIKOJ GORICI",
         "students": 1159,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "VELIKA GORICA"
     },
     {
         "university": "VELEUČILIŠTE U VIROVITICI",
         "students": 328,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "VIROVITICA",
         "district": "VIROVITIČKO-PODRAVSKA"
     },
     {
         "university": "VETERINARSKI FAKULTET, ZAGREB",
         "students": 1081,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "ZAGREB"
     },
     {
         "university": "VISOKO EVANĐEOSKO TEOLOŠKO UČILIŠTE, OSIJEK",
         "students": 34,
-        "category": "filozofsko usmjerenje",
+        "category": "filozofsko",
         "city": "OSIJEK"
     },
     {
         "university": "VISOKO UČILIŠTE ALGEBRA",
         "students": 1831,
-        "category": "tehničko usmjerenje",
+        "category": "tehničko",
         "city": "ZAGREB"
     },
     {
         "university": "ZAGREBAČKA ŠKOLA EKONOMIJE I MANAGEMENTA, ZAGREB",
         "students": 742,
-        "category": "društveno usmjerenje",
+        "category": "društveno",
         "city": "ZAGREB"
     },
     {
         "university": "ZDRAVSTVENO VELEUČILIŠTE, ZAGREB",
         "students": 4193,
-        "category": "zdravstveno usmjerenje",
+        "category": "zdravstveno",
         "city": "ZAGREB"
     }
 ]

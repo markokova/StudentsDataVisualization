@@ -1,19 +1,42 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #333;
+    background-image: url('../images/croatia.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for better text visibility */
 }
 
 header h1 {
+    font-size: 36px;
     margin: 0;
-    padding: 10px 0;
-    font-size: 24px;
+    position: relative; /* Allows the h1 to be above the overlay */
+    z-index: 1;
+}
+
+nav {
+    margin-top: 15px;
+    position: relative; /* Allows the nav to be above the overlay */
+    z-index: 1;
 }
 
 nav ul {
@@ -22,18 +45,23 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-size: 16px;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s, background-color 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
