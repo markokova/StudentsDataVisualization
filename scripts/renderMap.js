@@ -3,200 +3,22 @@ const parameterSelect = document.getElementById("parameter-select");
 function getColorScale(parameter) {
     switch (parameter) {
         case "studenata":
-            return d3.scale.log().domain([500, 90000]).range(["#008000", "#FFFF00", "#FF0000"]);
+            return d3.scale.log().domain([500, 90000]).range(["#008000", "#FFFF00"]);
         case "stanovnika":
-            return d3.scale.log().domain([5000, 900000]).range(["#008000", "#FFFF00", "#FF0000"]);
+            return d3.scale.log().domain([5000, 900000]).range(["#008000", "#FFFF00"]);
         case "postotak-studenata":
-            return d3.scale.linear().domain([0, 10]).range(["#008000", "#FFFF00", "#FF0000"]);
+            return d3.scale.linear().domain([0, 10]).range(["#008000", "#FFFF00"]);
         case "broj-fakulteta":
-            return d3.scale.linear().domain([0, 50]).range(["#008000", "#FFFF00", "#FF0000"]);
-        // return d3.scale.linear().domain([0, 50]).range(["#008000", "#83F28F", "#FFFF00"]);
+            return d3.scale.linear().domain([0, 50]).range(["#008000", "#FFFF00"]);
     }
 }
 
-function initializeLegend() {
-    const legendWidth = 120;
-    const legendHeight = 300;
-
-    const legendSvg = d3.select("#legend")
-        .append("svg")
-        .attr("id", "legendSvg")
-        .attr("width", legendWidth)
-        .attr("height", legendHeight)
-        .style("background", "white");
-
-    const gradient = legendSvg.append("defs")
-        .append("linearGradient")
-        .attr("id", "gradient")
-        .attr("x1", "0%")
-        .attr("x2", "0%")
-        .attr("y1", "100%")
-        .attr("y2", "-40%");
-
-    gradient.append("stop")
-        .attr("offset", "0%")
-        .attr("stop-color", "#008000")
-        .attr("stop-opacity", 1);
-
-    gradient.append("stop")
-        .attr("offset", "60%")
-        .attr("stop-color", "#FFFF00")
-        .attr("stop-opacity", 1);
-
-    gradient.append("stop")
-        .attr("offset", "100%")
-        .attr("stop-color", "#FF0000")
-        .attr("stop-opacity", 1);
-
-    legendSvg.append("rect")
-        .attr("width", legendWidth)
-        .attr("height", legendHeight)
-        .attr("x", 0)
-        .style("fill", "url(#gradient)");
-
-    const yScale = d3.scale.linear()
-        .domain([2000, 90000])
-        .range([legendHeight, 0]);
-
-    const yAxis = d3.svg.axis()
-        .scale(yScale)
-        .orient("right")
-        .ticks(5);
-
-    legendSvg.append("g")
-        .attr("class", "y axis")
-        .attr("transform", "translate(40,0)")
-        .call(yAxis);
-}
-
-function updateLegend(color) {
-    const legendSvg = d3.select("#legendSvg");
-
-    // Update gradient stops based on the color scale
-    const gradient = legendSvg.select("#gradient");
-
-    gradient.select("stop[offset='0%']")
-        .attr("stop-color", color.range()[0]);
-
-    gradient.select("stop[offset='60%']")
-        .attr("stop-color", color.range()[1]);
-
-    gradient.select("stop[offset='100%']")
-        .attr("stop-color", color.range()[2]);
-
-    // Update the axis scale based on the color scale domain
-    const yScale = d3.scale.linear()
-        .domain(color.domain())
-        .range([295, 0]);
-
-    const yAxis = d3.svg.axis()
-        .scale(yScale)
-        .orient("right")
-        .ticks(5);
-
-    legendSvg.select(".y.axis")
-        .transition()
-        .call(yAxis);
-}
-
-function createBarChart(data) {
-    // Remove any existing chart
-    d3.select("#chart").selectAll("*").remove();
-
-    // Group data by category and sum students
-    var categoryData = d3.nest()
-        .key(function (d) { return d.category; })
-        .rollup(function (v) { return d3.sum(v, function (d) { return d.students; }); })
-        .entries(data);
-
-    console.log(categoryData.length);
-
-    var margin = { top: 20, right: 20, bottom: 100, left: 80 },
-        width = 600 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
-
-    var x = d3.scale.ordinal()
-        .rangeRoundBands([0, width], 0.2); // Increase spacing between the bands
-
-    var y = d3.scale.linear()
-        .range([height, 0]);
-
-    var xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("bottom");
-
-    var yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left")
-        .ticks(10);
-
-    var svg = d3.select("#chart").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    x.domain(categoryData.map(function (d) { return d.key; }));
-    y.domain([0, d3.max(categoryData, function (d) { return d.values; })]);
-
-    svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis)
-        .selectAll("text")
-        .style("text-anchor", "middle") // Center-align the text
-        .attr("dx", "0em") // Adjust the horizontal position
-        .attr("dy", ".75em"); // Adjust the vertical position
-
-    svg.append("text") // Append text element for x-axis label
-        .attr("x", width + 20) // Position at the center of the x-axis
-        .attr("y", height + 40) // Position below the x-axis
-        .attr("dy", "1em") // Adjust vertical position
-        .style("text-anchor", "end") // Center align the text
-        .text("[Usmjerenje]"); // Set the label text
-
-    svg.append("g")
-        .attr("class", "y axis")
-        .call(yAxis)
-        .append("text")
-        .attr("y", 6)
-        .attr("dy", "-.90em")
-        .style("text-anchor", "end")
-        .text("[Studenti]");
-
-    // Create a tooltip div that is hidden by default
-    const tooltip = d3.select("body").append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
-
-    svg.append("g").selectAll(".bar")
-        .data(categoryData)
-        .enter().append("rect")
-        .attr("class", "bar")
-        .attr("x", function (d) { return x(d.key); })
-        .attr("width", x.rangeBand())
-        .attr("y", function (d) { return y(d.values); })
-        .attr("height", function (d) { return height - y(d.values); })
-        .on("mouseover", function (event, d) {
-            tooltip.transition()
-                .duration(200)
-                .style("opacity", .9);
-            tooltip.html(d.students)
-                .style("left", (event.pageX + 5) + "px")
-                .style("top", (event.pageY - 28) + "px");
-        })
-        .on("mouseout", function (d) {
-            tooltip.transition()
-                .duration(500)
-                .style("opacity", 0);
-        });
-}
-
-function updateMap() {
+function renderMap() {
     const parameter = parameterSelect.value;
     const color = getColorScale(parameter);
     updateLegend(color);
 
+    // json file is downloaded from FERIT Osijek subject Data Visualisation, LV5
     d3.json("data/cro_regv3_ext.json", function (error, cro) {
         if (error) throw error;
 
@@ -205,7 +27,7 @@ function updateMap() {
         const paths = d3.select("#map").selectAll("path.county")
             .data(data.features);
 
-        paths.enter()
+            paths.enter()
             .append("path")
             .attr("class", "county")
             .attr("id", function (d) { return d.id; })
@@ -214,12 +36,25 @@ function updateMap() {
             .style("stroke-width", 1)
             .style("stroke-opacity", 1)
             .on("mouseover", function (d) {
+                d3.select(this)
+                    .transition()
+                    .duration(50)
+                    .style("stroke-width", 3)
+                    .style("stroke", "black");
+        
                 d3.select("#zupanija").text("Županija: " + d.properties.name);
                 d3.select("#studenata").text("Studenata: " + d.properties.studenata);
                 d3.select("#stanovnika").text("Stanovnika: " + d.properties.stanovnika);
                 d3.select('#postotak-studenata').text(`Postotak studenata: ${((d.properties.studenata / d.properties.stanovnika) * 100).toFixed(2)}%`);
                 d3.select("#grad_opcina").text("Gradova/općina: " + d.properties.gradovi_opcine);
                 d3.select("#broj-fakulteta").text("Broj fakulteta: " + d.properties.broj_fakulteta);
+            })
+            .on("mouseout", function (d) {
+                d3.select(this)
+                    .transition()
+                    .duration(50)
+                    .style("stroke-width", 1)
+                    .style("stroke", "gray");
             })
             .on("click", showDistrictDetails);
 
@@ -240,10 +75,6 @@ function updateMap() {
         paths.exit().remove();
 
         function showDistrictDetails(d) {
-            var centroid = d3.geo.path().projection(d3.geo.mercator().center([0, 10]).scale(6000).translate([17600, 4500]).rotate([-180, 0])).centroid(d);
-            var x = centroid[0];
-            var y = centroid[1];
-
             var districtName = d.properties.name;
             districtName = districtName.toUpperCase();
 
@@ -253,7 +84,7 @@ function updateMap() {
                 var filteredUniversities = dataset.filter(function (uni) {
                     return uni.district === districtName;
                 });
-
+                console.log(filteredUniversities);
                 var modal = document.getElementById("districtModal");
                 var modalDetails = document.getElementById("modalDetails");
 
@@ -282,7 +113,7 @@ function updateMap() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    parameterSelect.addEventListener("change", updateMap);
-    initializeLegend(); // Initialize the legend on page load
-    updateMap(); // Initial map rendering
+    parameterSelect.addEventListener("change", renderMap);
+    initializeLegend();
+    renderMap(); 
 });

@@ -537,13 +537,6 @@
         "district": "GRAD ZAGREB"
     },
     {
-        "university": "PREHRAMBENO-TEHNOLOŠKI FAKULTET, OSIJEK",
-        "students": 644,
-        "category": "tehničko",
-        "city": "OSIJEK",
-        "district": "OSJEČKO-BARANJSKA"
-    },
-    {
         "university": "PRIRODOSLOVNO-MATEMATIČKI FAKULTET, SPLIT",
         "students": 1078,
         "category": "tehničko",
@@ -625,13 +618,6 @@
         "category": "društveno",
         "city": "DUBROVNIK",
         "district": "DUBROVAČKO-NERETVANSKA"
-    },
-    {
-        "university": "SVEUČILIŠTE U OSIJEKU***",
-        "students": 74,
-        "category": "društveno",
-        "city": "OSIJEK",
-        "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "SVEUČILIŠTE U RIJECI***",
@@ -786,13 +772,6 @@
         "category": "društveno",
         "city": "DUBROVNIK",
         "district": "DUBROVAČKO-NERETVANSKA"
-    },
-    {
-        "university": "SVEUČILIŠTE U OSIJEKU***",
-        "students": 74,
-        "category": "društveno",
-        "city": "OSIJEK",
-        "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "SVEUČILIŠTE U PULI",

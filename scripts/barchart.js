@@ -1,3 +1,5 @@
+//https://github.com/perossing/d3-data-visualizations/blob/master/d3-svg-barcharts/vertical_barchart/script.js
+
 const data = [
     { "programType": "Stručni studij", "students": 44580 },
     { "programType": "Stručni kratki studij", "students": 7 },
@@ -12,7 +14,7 @@ const data = [
     { "programType": "Doktorski studij", "students": 4728 }
 ];
 
-const margin = { top: 20, right: 30, bottom: 130, left: 50 }, // Increased bottom margin
+const margin = { top: 20, right: 30, bottom: 130, left: 50 },
       width = 960 - margin.left - margin.right,
       height = 600 - margin.top - margin.bottom;
 
@@ -32,7 +34,6 @@ const y = d3.scaleLinear()
     .nice()
     .range([height, 0]);
 
-// Create a tooltip div that is hidden by default
 const tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
@@ -66,7 +67,7 @@ svg.append("g")
     .call(d3.axisBottom(x))
     .selectAll("text")
     .attr("class", "axis-label")
-    .attr("transform", "rotate(-30)") // Adjusted rotation angle
+    .attr("transform", "rotate(-30)")
     .style("text-anchor", "end");
 
 svg.append("g")
