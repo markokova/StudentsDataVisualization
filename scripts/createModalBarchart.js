@@ -35,14 +35,23 @@ function createBarChart(data) {
     x.domain(categoryData.map(function (d) { return d.key; }));
     y.domain([0, d3.max(categoryData, function (d) { return d.values; })]);
 
-    svg.append("g")
+    var xAxisText = svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis)
         .selectAll("text")
-        .style("text-anchor", "middle")
-        .attr("dx", "0em") 
-        .attr("dy", ".75em");
+        if(categoryData.length > 4){
+            xAxisText
+            .style("text-anchor", "middle")
+            .attr("dx", "-.8em") 
+            .attr("dy", "1.2em")
+            .attr("transform", "rotate(-10)");
+        } else {
+            xAxisText
+            .style("text-anchor", "middle")
+            .attr("dx", "0em")
+            .attr("dy", ".75em");
+        }
 
     svg.append("text") 
         .attr("x", width + 20)

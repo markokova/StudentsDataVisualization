@@ -1,6 +1,6 @@
 [
     {
-        "university": "ADVENTISTIČKO TEOLOŠKO VISOKO UČILIŠTE, MARUŠEVEC*",
+        "university": "ADVENTISTIČKO TEOLOŠKO VISOKO UČILIŠTE, MARUŠEVEC",
         "students": 21,
         "category": "filozofsko",
         "city": "MARUŠEVEC",
@@ -58,7 +58,7 @@
     {
         "university": "EFFECTUS VELEUČILIŠTE, ZAGREB",
         "students": 386,
-        "category": "tehničko",
+        "category": "razno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
@@ -273,7 +273,7 @@
         "district": "GRAD ZAGREB"
     },
     {
-        "university": "FILOZOFSKO-TEOLOŠKI INSTITUT D.I., ZAGREB*",
+        "university": "FILOZOFSKO-TEOLOŠKI INSTITUT D.I., ZAGREB",
         "students": 54,
         "category": "filozofsko",
         "city": "ZAGREB",
@@ -338,7 +338,8 @@
     {
         "university": "ISTARSKO VELEUČILIŠTE",
         "students": 74,
-        "category": "društveno"
+        "category": "razno",
+        "district": "ISTARSKA"
     },
     {
         "university": "KATOLIČKI BOGOSLOVNI FAKULTET, ĐAKOVO",
@@ -427,7 +428,7 @@
     {
         "university": "MEĐIMURSKO VELEUČILIŠTE U ČAKOVCU",
         "students": 542,
-        "category": "tehničko",
+        "category": "razno",
         "city": "ČAKOVEC",
         "district": "MEĐIMURSKA"
     },
@@ -602,50 +603,29 @@
     {
         "university": "SVEUČILIŠTE  VERN, ZAGREB",
         "students": 1317,
-        "category": "društveno",
+        "category": "razno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "SVEUČILIŠTE SJEVER",
         "students": 4421,
-        "category": "tehničko",
+        "category": "razno",
         "district": "KRAPINSKO-ZAGORSKA"
     },
     {
         "university": "SVEUČILIŠTE U DUBROVNIKU",
         "students": 1313,
-        "category": "društveno",
+        "category": "razno",
         "city": "DUBROVNIK",
         "district": "DUBROVAČKO-NERETVANSKA"
     },
     {
-        "university": "SVEUČILIŠTE U RIJECI***",
-        "students": 183,
-        "category": "društveno",
-        "city": "RIJEKA",
-        "district": "PRIMORSKO-GORANSKA"
-    },
-    {
-        "university": "SVEUČILIŠTE U SPLITU***",
-        "students": 249,
-        "category": "društveno",
-        "city": "SPLIT",
-        "district": "SPLITSKO-DALMATINSKA"
-    },
-    {
         "university": "SVEUČILIŠTE U ZADRU",
         "students": 4807,
-        "category": "društveno",
+        "category": "razno",
         "city": "ZADAR",
         "district": "ZADARSKA"
-    },
-    {
-        "university": "SVEUČILIŠTE U ZAGREBU***",
-        "students": 489,
-        "category": "društveno",
-        "city": "ZAGREB",
-        "district": "GRAD ZAGREB"
     },
     {
         "university": "TEHNIČKI FAKULTET, RIJEKA",
@@ -697,13 +677,6 @@
         "district": "GRAD ZAGREB"
     },
     {
-        "university": "R.I.T. CROATIA, DUBROVNIK",
-        "students": 790,
-        "category": "tehničko",
-        "city": "DUBROVNIK",
-        "district": "DUBROVAČKO-NERETVANSKA"
-    },
-    {
         "university": "RUDARSKO-GEOLOŠKO-NAFTNI FAKULTET, ZAGREB",
         "students": 588,
         "category": "tehničko",
@@ -748,63 +721,56 @@
     {
         "university": "SVEUČILIŠTE  VERN, ZAGREB",
         "students": 1317,
-        "category": "društveno",
+        "category": "razno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "SVEUČILIŠTE SJEVER",
         "students": 2221,
-        "category": "tehničko",
+        "category": "razno",
         "city": "VARAŽDIN",
         "district": "VARAŽDINSKA"
     },
     {
         "university": "SVEUČILIŠTE SJEVER",
         "students": 2200,
-        "category": "tehničko",
+        "category": "razno",
         "city": "KOPRIVNICA",
         "district": "KOPRIVNIČKO-KRIŽEVAČKA"
     },
     {
-        "university": "SVEUČILIŠTE U DUBROVNIKU",
-        "students": 1313,
-        "category": "društveno",
-        "city": "DUBROVNIK",
-        "district": "DUBROVAČKO-NERETVANSKA"
-    },
-    {
         "university": "SVEUČILIŠTE U PULI",
         "students": 3180,
-        "category": "društveno",
+        "category": "razno",
         "city": "PULA",
         "district": "ISTARSKA"
     },
     {
-        "university": "SVEUČILIŠTE U RIJECI***",
+        "university": "SVEUČILIŠTE U RIJECI",
         "students": 183,
-        "category": "društveno",
+        "category": "razno",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "SVEUČILIŠTE U SLAVONSKOM BRODU",
         "students": 2072,
-        "category": "društveno",
+        "category": "razno",
         "city": "SLAVONSKI BROD",
         "district": "BRODSKO-POSAVSKA"
     },
     {
-        "university": "SVEUČILIŠTE U SPLITU***",
+        "university": "SVEUČILIŠTE U SPLITU",
         "students": 249,
-        "category": "društveno",
+        "category": "razno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
-        "university": "SVEUČILIŠTE U ZAGREBU***",
+        "university": "SVEUČILIŠTE U ZAGREBU",
         "students": 489,
-        "category": "društveno",
+        "category": "razno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
@@ -830,7 +796,7 @@
         "district": "GRAD ZAGREB"
     },
     {
-        "university": "TEOLOŠKI FAKULTET \"MATIJA VLAČIĆ-ILIRIK\", ZAGREB - EVANGELIČKI**",
+        "university": "TEOLOŠKI FAKULTET \"MATIJA VLAČIĆ-ILIRIK\", ZAGREB - EVANGELIČKI",
         "students": 25,
         "category": "filozofsko",
         "city": "ZAGREB",
@@ -860,21 +826,21 @@
     {
         "university": "VELEUČILIŠTE \"HRVATSKO ZAGORJE\", KRAPINA",
         "students": 314,
-        "category": "tehničko",
+        "category": "razno",
         "city": "KRAPINA",
         "district": "KRAPINSKO-ZAGORSKA"
     },
     {
         "university": "VELEUČILIŠTE \"LAVOSLAV RUŽIČKA\" U VUKOVARU",
         "students": 921,
-        "category": "tehničko",
+        "category": "razno",
         "city": "VUKOVAR",
         "district": "VUKOVARSKO-SRIJEMSKA"
     },
     {
         "university": "VELEUČILIŠTE \"MARKO MARULIĆ\" U KNINU",
         "students": 273,
-        "category": "tehničko",
+        "category": "razno",
         "city": "KNIN",
         "district": "ŠIBENSKO-KNINSKA"
     },
@@ -888,35 +854,35 @@
     {
         "university": "VELEUČILIŠTE ARCA, SPLIT",
         "students": 52,
-        "category": "tehničko",
+        "category": "razno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "VELEUČILIŠTE ASPIRA, SPLIT",
         "students": 727,
-        "category": "tehničko",
+        "category": "razno",
         "city": "SPLIT",
         "district": "SPLITSKO-DALMATINSKA"
     },
     {
         "university": "VELEUČILIŠTE BALTAZAR, ZAPREŠIĆ",
         "students": 1432,
-        "category": "tehničko",
+        "category": "razno",
         "city": "ZAPREŠIĆ",
         "district": "ZAGREBAČKA"
     },
     {
         "university": "VELEUČILIŠTE EDWARD BERNAYS, ZAGREB",
         "students": 335,
-        "category": "tehničko",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
     {
         "university": "VELEUČILIŠTE IVANIĆ-GRAD",
         "students": 166,
-        "category": "tehničko",
+        "category": "razno",
         "city": "IVANIĆ-GRAD",
         "district": "ZAGREBAČKA"
     },
@@ -929,21 +895,21 @@
     },
     {
         "university": "VELEUČILIŠTE MENADŽMENTA I SIGURNOSTI SECURUS",
-        "category": "tehničko",
+        "category": "društveno",
         "city": "UNKNOWN",
         "district": "UNKNOWN"
     },
     {
         "university": "VELEUČILIŠTE PAR, RIJEKA",
         "students": 123,
-        "category": "tehničko",
+        "category": "razno",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "VELEUČILIŠTE RRIF, ZAGREB",
         "students": 120,
-        "category": "tehničko",
+        "category": "društveno",
         "city": "ZAGREB",
         "district": "GRAD ZAGREB"
     },
@@ -957,48 +923,49 @@
     {
         "university": "VELEUČILIŠTE U BJELOVARU",
         "students": 749,
-        "category": "tehničko",
+        "category": "razno",
         "city": "BJELOVAR",
         "district": "BJELOVARSKO-BILOGORSKA"
     },
     {
         "university": "VELEUČILIŠTE U KARLOVCU",
         "students": 1434,
-        "category": "tehničko",
+        "category": "razno",
         "city": "KARLOVAC",
         "district": "KARLOVAČKA"
     },
     {
         "university": "VELEUČILIŠTE U KRIŽEVCIMA, KRIŽEVCI",
         "students": 337,
-        "category": "tehničko",
+        "category": "razno",
         "city": "KRIŽEVCI",
         "district": "KOPRIVNIČKO-KRIŽEVAČKA"
     },
     {
         "university": "VELEUČILIŠTE U RIJECI",
         "students": 1368,
-        "category": "tehničko",
+        "category": "razno",
         "city": "RIJEKA",
         "district": "PRIMORSKO-GORANSKA"
     },
     {
         "university": "VELEUČILIŠTE U ŠIBENIKU",
         "students": 568,
-        "category": "tehničko",
+        "category": "razno",
         "city": "ŠIBENIK",
         "district": "ŠIBENSKO-KNINSKA"
     },
     {
         "university": "VELEUČILIŠTE U VELIKOJ GORICI",
         "students": 1159,
-        "category": "tehničko",
-        "city": "VELIKA GORICA"
+        "category": "razno",
+        "city": "VELIKA GORICA",
+        "district": "ZAGREBAČKA"
     },
     {
         "university": "VELEUČILIŠTE U VIROVITICI",
         "students": 328,
-        "category": "tehničko",
+        "category": "razno",
         "city": "VIROVITICA",
         "district": "VIROVITIČKO-PODRAVSKA"
     },
@@ -1006,31 +973,37 @@
         "university": "VETERINARSKI FAKULTET, ZAGREB",
         "students": 1081,
         "category": "zdravstveno",
-        "city": "ZAGREB"
+        "city": "ZAGREB",
+        "district":"GRAD ZAGREB"
     },
     {
         "university": "VISOKO EVANĐEOSKO TEOLOŠKO UČILIŠTE, OSIJEK",
         "students": 34,
         "category": "filozofsko",
-        "city": "OSIJEK"
+        "city": "OSIJEK",
+        "district": "OSJEČKO-BARANJSKA"
     },
     {
         "university": "VISOKO UČILIŠTE ALGEBRA",
         "students": 1831,
         "category": "tehničko",
-        "city": "ZAGREB"
+        "city": "ZAGREB",
+        "district": "GRAD ZAGREB"
     },
     {
         "university": "ZAGREBAČKA ŠKOLA EKONOMIJE I MANAGEMENTA, ZAGREB",
         "students": 742,
         "category": "društveno",
-        "city": "ZAGREB"
+        "city": "ZAGREB",
+        "district": "GRAD ZAGREB"
+
     },
     {
         "university": "ZDRAVSTVENO VELEUČILIŠTE, ZAGREB",
         "students": 4193,
         "category": "zdravstveno",
-        "city": "ZAGREB"
+        "city": "ZAGREB",
+        "district": "GRAD ZAGREB"
     }
 ]
 

@@ -81,6 +81,8 @@ function renderMap() {
             d3.json("data/students2.json", function (error, dataset) {
                 if (error) throw error;
 
+                console.log(districtName);
+
                 var filteredUniversities = dataset.filter(function (uni) {
                     return uni.district === districtName;
                 });
