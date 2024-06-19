@@ -23,13 +23,8 @@ function initializeLegend() {
         .attr("stop-opacity", 1);
 
     gradient.append("stop")
-        .attr("offset", "60%")
+        .attr("offset", "50%")
         .attr("stop-color", "#FFFF00")
-        .attr("stop-opacity", 1);
-
-    gradient.append("stop")
-        .attr("offset", "100%")
-        .attr("stop-color", "#FF0000")
         .attr("stop-opacity", 1);
 
     legendSvg.append("rect")
@@ -39,13 +34,12 @@ function initializeLegend() {
         .style("fill", "url(#gradient)");
 
     const yScale = d3.scale.linear()
-        .domain([2000, 90000])
+        .domain([100, 90000])
         .range([legendHeight, 0]);
 
     const yAxis = d3.svg.axis()
         .scale(yScale)
-        .orient("right")
-        .ticks(5);
+        .orient("right");
 
     legendSvg.append("g")
         .attr("class", "y axis")
@@ -54,6 +48,7 @@ function initializeLegend() {
 }
 
 function updateLegend(color) {
+    const legendHeight = 320;
     const legendSvg = d3.select("#legendSvg");
     const gradient = legendSvg.select("#gradient");
 
@@ -65,7 +60,7 @@ function updateLegend(color) {
 
     const yScale = d3.scale.linear()
         .domain(color.domain())
-        .range([295, 0]);
+        .range([legendHeight - 25, 0]);
 
     const yAxis = d3.svg.axis()
         .scale(yScale)

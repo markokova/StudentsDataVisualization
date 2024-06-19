@@ -3,13 +3,13 @@ const parameterSelect = document.getElementById("parameter-select");
 function getColorScale(parameter) {
     switch (parameter) {
         case "studenata":
-            return d3.scale.log().domain([500, 90000]).range(["#008000", "#FFFF00"]);
+            return d3.scale.log().domain([100, 90000]).range(["#008000", "#FFFF00"]);
         case "stanovnika":
             return d3.scale.log().domain([5000, 900000]).range(["#008000", "#FFFF00"]);
         case "postotak-studenata":
             return d3.scale.linear().domain([0, 10]).range(["#008000", "#FFFF00"]);
         case "broj-fakulteta":
-            return d3.scale.linear().domain([0, 50]).range(["#008000", "#FFFF00"]);
+            return d3.scale.linear().domain([1, 50]).range(["#008000", "#FFFF00"]);
     }
 }
 
@@ -49,7 +49,7 @@ function renderMap() {
                 d3.select("#grad_opcina").text("Gradova/općina: " + d.properties.gradovi_opcine);
                 d3.select("#broj-fakulteta").text("Broj fakulteta: " + d.properties.broj_fakulteta);
             })
-            .on("mouseout", function (d) {
+            .on("mouseout", function () {
                 d3.select(this)
                     .transition()
                     .duration(50)
