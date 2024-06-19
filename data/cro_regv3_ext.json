@@ -47,7 +47,7 @@
                 ],
                 "properties":{
                    "studenata": 4206,
-                   "stanovnika":122568,
+                   "stanovnika":115564,
                    "gradovi_opcine":22,
                    "broj_fakulteta":4,
                    "adm1_code":"HRV-1490",
@@ -135,7 +135,7 @@
                 ],
                 "properties":{
                    "studenata": 841,
-                   "stanovnika":109375,
+                   "stanovnika":96381,
                    "gradovi_opcine":20,
                    "broj_fakulteta":2,
                    "adm1_code":"HRV-1491",
@@ -240,7 +240,7 @@
                 ],
                 "properties":{
                    "studenata": 23516,
-                   "stanovnika":454798,
+                   "stanovnika":423407,
                    "gradovi_opcine":55,
                    "broj_fakulteta":25,
                    "adm1_code":"HRV-1492",
@@ -355,7 +355,7 @@
                 ],
                 "properties":{
                    "studenata": 4807,
-                   "stanovnika":170017,
+                   "stanovnika":159766,
                    "gradovi_opcine":34,
                    "broj_fakulteta":1,
                    "adm1_code":"HRV-1493",
@@ -433,7 +433,7 @@
                 ],
                 "properties":{
                   "studenata": 4735,
-                   "stanovnika":132892,
+                   "stanovnika":120702,
                    "gradovi_opcine":32,
                    "broj_fakulteta":2,
                    "adm1_code":"HRV-1582",
@@ -509,7 +509,7 @@
                 ],
                 "properties":{
                   "studenata": 1434,
-                   "stanovnika":128899,
+                   "stanovnika":112195,
                    "gradovi_opcine":22,
                    "broj_fakulteta":1,
                    "adm1_code":"HRV-1583",
@@ -593,7 +593,7 @@
                 ],
                 "properties":{
                   "studenata": 198,
-                   "stanovnika":50927,
+                   "stanovnika":42748,
                    "gradovi_opcine":12,
                    "broj_fakulteta":1,
                    "adm1_code":"HRV-1584",
@@ -695,7 +695,7 @@
                 ],
                 "properties":{
                   "studenata": 18511,
-                   "stanovnika":296195,
+                   "stanovnika":265419,
                    "gradovi_opcine":36,
                    "broj_fakulteta":21,
                    "adm1_code":"HRV-1586",
@@ -774,7 +774,7 @@
                 ],
                 "properties":{
                   "studenata": 142,
-                   "stanovnika":172439,
+                   "stanovnika":139603,
                    "gradovi_opcine":19,
                    "broj_fakulteta":1,
                    "adm1_code":"HRV-1587",
@@ -856,7 +856,7 @@
                 ],
                 "properties":{
                   "studenata": 1598,
-                   "stanovnika":317606,
+                   "stanovnika":299985,
                    "gradovi_opcine":34,
                    "broj_fakulteta":2,
                    "adm1_code":"HRV-1588",
@@ -931,7 +931,7 @@
                 ],
                 "properties":{
                   "studenata": 90924,
-                   "stanovnika":790017,
+                   "stanovnika":767131,
                    "gradovi_opcine":"-",
                    "broj_fakulteta":51,
                    "adm1_code":"HRV-1589",
@@ -1005,7 +1005,7 @@
                 ],
                 "properties":{
                   "studenata": 6360,
-                   "stanovnika":208055,
+                   "stanovnika":195237,
                    "gradovi_opcine":41,
                    "broj_fakulteta":1,
                    "adm1_code":"HRV-1592",
@@ -1083,7 +1083,7 @@
                 ],
                 "properties":{
                   "studenata": 2072,
-                   "stanovnika":158575,
+                   "stanovnika":130267,
                    "gradovi_opcine":28,
                    "broj_fakulteta":1,
                    "adm1_code":"HRV-1602",
@@ -1161,7 +1161,7 @@
                 ],
                 "properties":{
                   "studenata": 15423,
-                   "stanovnika":305032,
+                   "stanovnika":258026,
                    "gradovi_opcine":42,
                    "broj_fakulteta":20,
                    "adm1_code":"HRV-1603",
@@ -1238,9 +1238,10 @@
                    ]
                 ],
                 "properties":{
-                  "studenata": 2072,
-                   "stanovnika":158575,
+                  "studenata": 620,
+                   "stanovnika":64084,
                    "gradovi_opcine":28,
+                   "broj_fakulteta":1,
                    "adm1_code":"HRV-1604",
                    "OBJECTID_1":2230,
                    "diss_me":1604,
@@ -1249,8 +1250,8 @@
                    "wikipedia":null,
                    "iso_a2":"HR",
                    "adm0_sr":1,
-                   "name":"Brodsko-Posavska",
-                   "name_alt":"Slavonski Brod-Posavina",
+                   "name":"Požeško-Slavonska",
+                   "name_alt":"Pozega - Slavonska",
                    "name_local":null,
                    "type":"Å½upanija",
                    "type_en":"County",
@@ -1278,7 +1279,7 @@
                    "fips_alt":null,
                    "woe_id":12577981,
                    "woe_label":"PoÃ…Â¾eÃ…Â¡ko-slavonska, HR, Croatia",
-                   "woe_name":"Brodsko-Posavska",
+                   "woe_name":"Pozesko-Slavonska",
                    "latitude":45.3863,
                    "longitude":17.6849,
                    "sov_a3":"HRV",
@@ -1288,7 +1289,7 @@
                    "geonunit":"Croatia",
                    "gu_a3":"HRV",
                    "gn_id":3337512,
-                   "gn_name":"Brodsko-Posavska Zupanija",
+                   "gn_name":"Pozesko-Slavonska Zupanija",
                    "gns_id":9031081,
                    "gns_name":"Pozesko-Slavonska Zupanija",
                    "gn_level":1,
@@ -1314,7 +1315,7 @@
                 ],
                 "properties":{
                   "studenata": 921,
-                   "stanovnika":179521,
+                   "stanovnika":143113,
                    "gradovi_opcine":31,
                    "broj_fakulteta":1,
                    "adm1_code":"HRV-1605",
@@ -1391,7 +1392,7 @@
                    ]
                 ],
                 "properties":{
-                   "stanovnika":79886,
+                   "stanovnika":70368,
                    "studenata": 328,
                    "gradovi_opcine":16,
                    "broj_fakulteta":1,
@@ -1470,7 +1471,7 @@
                 ],
                 "properties":{
                   "studenata": 749,
-                   "stanovnika":119764,
+                   "stanovnika":101879,
                    "gradovi_opcine":23,
                    "broj_fakulteta":1,
                    "adm1_code":"HRV-1607",
@@ -1549,7 +1550,7 @@
                 ],
                 "properties":{
                   "studenata": 337,
-                   "stanovnika":115584,
+                   "stanovnika":101221,
                    "gradovi_opcine":25,
                    "broj_fakulteta":2,
                    "adm1_code":"HRV-1608",
@@ -1625,7 +1626,7 @@
                 ],
                 "properties":{
                   "studenata": 542,
-                   "stanovnika":113804,
+                   "stanovnika":105250,
                    "gradovi_opcine":25,
                    "broj_fakulteta":1,
                    "adm1_code":"HRV-1609",
@@ -1703,7 +1704,7 @@
                 ],
                 "properties":{
                   "studenata": 2670,
-                   "stanovnika":175951,
+                   "stanovnika":159487,
                    "gradovi_opcine":28,
                    "broj_fakulteta":4,
                    "adm1_code":"HRV-1610",

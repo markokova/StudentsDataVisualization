@@ -1,6 +1,6 @@
 function initializeLegend() {
     const legendWidth = 120;
-    const legendHeight = 300;
+    const legendHeight = 320;
 
     const legendSvg = d3.select("#legend")
         .append("svg")
@@ -49,13 +49,12 @@ function initializeLegend() {
 
     legendSvg.append("g")
         .attr("class", "y axis")
-        .attr("transform", "translate(40,0)")
+        .attr("transform", "translate(40,10)")
         .call(yAxis);
 }
 
 function updateLegend(color) {
     const legendSvg = d3.select("#legendSvg");
-
     const gradient = legendSvg.select("#gradient");
 
     gradient.select("stop[offset='0%']")
