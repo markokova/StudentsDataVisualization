@@ -54,6 +54,8 @@ function initializeLegend() {
 }
 
 function updateLegend(color) {
+    const legendWidth = 120;
+    const legendHeight = 300;
     const legendSvg = d3.select("#legendSvg");
     const gradient = legendSvg.select("#gradient");
 
@@ -62,6 +64,13 @@ function updateLegend(color) {
 
     gradient.select("stop[offset='60%']")
         .attr("stop-color", color.range()[1]);
+
+    // const yScale = d3.scale.linear()
+    //     .domain(color.domain())
+    //     .range([295, 0]);
+
+    // .domain([2000, 90000])
+    // .range([legendHeight, 0]);
 
     const yScale = d3.scale.linear()
         .domain(color.domain())
