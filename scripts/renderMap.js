@@ -26,7 +26,7 @@ function renderMap() {
 
         const paths = d3.select("#map").selectAll("path.county")
             .data(data.features);
-
+            console.log(data.features);
             paths.enter()
             .append("path")
             .attr("class", "county")
@@ -71,8 +71,6 @@ function renderMap() {
                         return color(d.properties.broj_fakulteta);
                 }
             });
-
-        paths.exit().remove();
 
         function showDistrictDetails(d) {
             var districtName = d.properties.name;
